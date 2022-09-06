@@ -1,0 +1,13 @@
+per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
+print('Bank rates: ', per_cent)
+
+money = int(input('Amount to invest: '))
+print('Investing: ', money)
+
+
+deposit = [money * (per_cent.get('ТКБ')/100), money * (per_cent.get('СКБ')/100),
+                 money * (per_cent.get('ВТБ')/100), money * (per_cent.get('СБЕР')/100)]
+
+print('Deposits:', list(map(round, deposit)))
+
+print('Maximum deposit: ', round(max(deposit)))
